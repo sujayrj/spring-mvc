@@ -15,7 +15,7 @@
 <body>
 <h1>All Products page!</h1>
 
-<table>
+<table border="1px;">
     <tr>
         <th>Product name</th>
         <th>Product price</th>

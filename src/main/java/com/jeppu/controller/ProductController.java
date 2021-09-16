@@ -12,13 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping(value={"/product"})
 public class ProductController {
 
-    private ProductService productService;
-
     @Autowired
     @Qualifier("productService1")
-    public void setProductService(ProductService productService) {
-        this.productService = productService;
-    }
+    private ProductService productService;
 
     @GetMapping(value = "/all")
     public String getAllProducts(Model model){
