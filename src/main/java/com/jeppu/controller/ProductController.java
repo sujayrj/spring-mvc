@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -36,5 +37,15 @@ public class ProductController {
         model.addAttribute("categoryId", categoryId);
         model.addAttribute("categoryName", name);
         return "list-products";
+    }
+
+    //http://localhost:8080/spring_mvc_war_exploded/product/owners/100/ownerName/Police
+    @RequestMapping(value="/owners/{ownerId}/ownerName/{ownerName}")
+    public String findOwner(@PathVariable ("ownerId") String id, @PathVariable String ownerName, Model model){
+        System.out.println("Owner id : "+id);
+        System.out.println("Owner name : "+ownerName);
+        model.addAttribute("ownerId", id);
+        model.addAttribute("ownerName", ownerName);
+        return "get-products";
     }
 }
