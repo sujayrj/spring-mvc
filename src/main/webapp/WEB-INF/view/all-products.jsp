@@ -15,7 +15,10 @@
 <body>
 <h1>All Products page!</h1>
 
-<table border="1px;">
+<p>Product name : ${prod.name}</p>
+<p>Product name : ${prod.price}</p>
+
+<%--<table border="1px;">
     <tr>
         <th>Product name</th>
         <th>Product price</th>
@@ -26,6 +29,6 @@
             <td><c:out value="${prod.price}"/></td>
         </tr>
     </c:forEach>
-</table>
+</table>--%>
 </body>
 </html>

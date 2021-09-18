@@ -15,20 +15,17 @@
 <body>
 <h1>All Products page!</h1>
 
-<p>Product name : ${prod.name}</p>
-<p>Product name : ${prod.price}</p>
-
-<%--<table border="1px;">
+<table border="1px;">
     <tr>
         <th>Product name</th>
         <th>Product price</th>
     </tr>
-    <c:forEach items="${products}" var="prod">
+    <c:forEach items="${prods}" var="prod">
         <tr>
             <td><c:out value="${prod.name}"/></td>
             <td><c:out value="${prod.price}"/></td>
         </tr>
     </c:forEach>
-</table>--%>
+</table>
 </body>
 </html>
